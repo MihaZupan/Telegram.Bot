@@ -5,47 +5,47 @@ using Newtonsoft.Json.Serialization;
 namespace Telegram.Bot.Types
 {
     /// <summary>
-    /// Represents a video to be sent
+    /// Represents an audio file to be treated as music to be sent
     /// </summary>
     [JsonObject(MemberSerialization.OptIn, NamingStrategyType = typeof(SnakeCaseNamingStrategy))]
-    public class InputMediaVideo : InputMediaBase
+    public class InputMediaAudio : InputMediaBase
     {
         /// <summary>
-        /// Optional. Video width
+        /// Optional. Title of the audio
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public int Width { get; set; }
+        public int Title { get; set; }
 
         /// <summary>
-        /// Optional. Video height
+        /// Optional. Performer of the audio
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public int Height { get; set; }
+        public int Performer { get; set; }
 
         /// <summary>
-        /// Optional. Video duration
+        /// Optional. Duration of the audio in seconds
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public int Duration { get; set; }
 
         /// <summary>
-        /// Optional. Pass True, if the uploaded video is suitable for streaming
+        /// Optional. Thumbnail to send
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public bool SupportsStreaming { get; set; }
+        public InputMedia Thumb { get; set; }
 
         /// <summary>
-        /// Initializes a new video media to send
+        /// Initializes a new audio media to send
         /// </summary>
-        public InputMediaVideo()
+        public InputMediaAudio()
         {
-            Type = "video";
+            Type = "audio";
         }
 
         /// <summary>
-        /// Initializes a new video media to send with an <see cref="InputMedia"/>
+        /// Initializes a new audio media to send with an <see cref="InputMedia"/>
         /// </summary>
-        public InputMediaVideo(InputMedia media)
+        public InputMediaAudio(InputMedia media)
             : this()
         {
             Media = media;

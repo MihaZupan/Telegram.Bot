@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+- Type `InputMediaAnimation`
+- Type `InputMediaAudio`
+- Type `InputMediaDocument`
 - Additional constructors on `InputMediaPhoto` and `InputMediaVideo`
 
 ## [14.6.0] - 2018-06-12
