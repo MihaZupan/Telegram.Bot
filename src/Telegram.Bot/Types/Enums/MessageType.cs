@@ -45,6 +45,11 @@ namespace Telegram.Bot.Types.Enums
         Document,
 
         /// <summary>
+        /// The <see cref="Message"/> contains a <see cref="Types.Animation"/>
+        /// </summary>
+        Animation,
+
+        /// <summary>
         /// The <see cref="Message"/> contains a <see cref="Types.Sticker"/>
         /// </summary>
         Sticker,
