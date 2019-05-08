@@ -32,8 +32,9 @@ namespace Telegram.Bot.Types
         /// Date the message was sent
         /// </summary>
         [JsonProperty(Required = Required.Always)]
-        [JsonConverter(typeof(UnixDateTimeConverter))]
-        public DateTime Date { get; set; }
+        //[JsonConverter(typeof(UnixDateTimeConverter))]
+        //public DateTime Date { get; set; }
+        public long Date { get; set; }
 
         /// <summary>
         /// Conversation the message belongs to

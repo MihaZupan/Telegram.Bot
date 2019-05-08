@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Telegram.Bot.Types.Enums;
 
@@ -20,7 +20,7 @@ namespace Telegram.Bot.Types
         /// Type of chat
         /// </summary>
         [JsonProperty(Required = Required.Always)]
-        public ChatType Type { get; set; }
+        public string Type { get; set; }
 
         /// <summary>
         /// Optional. Title, for channels and group chats
